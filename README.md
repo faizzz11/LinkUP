@@ -19,8 +19,7 @@
 - **Frontend:** Next.js, React, Tailwind CSS  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB  
-- **Authentication:** JWT, OAuth  
-- **Hosting:** Vercel, Heroku, or your choice  
+  
 
 ## 🎨 Screenshots 
 ![alt text](<link-up/public/ss1.png>)
