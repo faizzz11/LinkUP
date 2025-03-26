@@ -28,8 +28,8 @@ export default function Home() {
             Join 50M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube, and other social media profiles.
           </p>
           <div className="input flex gap-2 mt-4">
-          <input type="text" placeholder="link.UP/username" className="bg-white text-black  focus:outline-green-900 flex font-normal max-w-[243px] relative min-w-0 p-[19px] px-[16px] rounded-lg" />
-          <button className="rounded-full z-10 bg-[rgb(233,192,233)] font-semibold px-[26px] py-[18px]">Claim Your LinkUP</button>
+          <input type="text" placeholder="link.UP/username" className="bg-white text-black  focus:outline-green-900 flex font-normal max-w-[243px] relative min-w-0 p-[19px] px-[26px] rounded-lg" />
+          <button className="rounded-full z-10 bg-[rgb(233,192,233)] font-medium px-[28px] py-[20px]">Claim Your LinkUP</button>
           </div>
         </div>
         
@@ -43,7 +43,7 @@ export default function Home() {
               initial={{ opacity: 0, rotateY: 90 }} // Starts hidden & rotated
               animate={{ opacity: 1, rotateY: 0 }} // Fades in smoothly
               exit={{ opacity: 0, rotateY: -90 }} // Fades out & rotates
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
             />
           </AnimatePresence>
         </div>
