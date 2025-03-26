@@ -1,9 +1,14 @@
 "use client"
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 export default function Home() {
+  const [Texttt, setTexttt] = useState("")
+  const router=useRouter();
+  
+
   const images = ["/home.png", "/home2.png", "/home3.png", "/home4.png", "/home5.png"];
   const [index, setIndex] = useState(0);
 
@@ -14,6 +19,11 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const createLinkUP =()=>{
+    router.push(`/generate?handle=${Texttt}`)
+
+  }
 
   return (
     <main>
@@ -28,8 +38,8 @@ export default function Home() {
             Join 50M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube, and other social media profiles.
           </p>
           <div className="input flex gap-2 mt-4">
-          <input type="text" placeholder="link.UP/username" className="bg-white text-black  focus:outline-green-900 flex font-normal max-w-[243px] relative min-w-0 p-[19px] px-[26px] rounded-lg" />
-          <button className="rounded-full z-10 bg-[rgb(233,192,233)] font-medium px-[28px] py-[20px]">Claim Your LinkUP</button>
+          <input value={Texttt} onChange={(e)=>setTexttt(e.target.value)} type="text" placeholder="Claim Your Handle!!" className="bg-white text-gray-600  focus:outline-green-900 flex font-normal max-w-[243px] relative min-w-0 p-[19px] px-[26px] rounded-lg" />
+          <button onClick={()=> createLinkUP()} className="rounded-full z-10 bg-[rgb(233,192,233)] font-medium px-[28px] py-[20px]">Claim Your LinkUP</button>
           </div>
         </div>
         
